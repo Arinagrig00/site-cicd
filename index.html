@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bubble Tea Mood — кофейня bubble tea. Свежие напитки, акции и бонусная программа." />
+  <meta name="theme-color" content="#3e9e6d" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bubble Tea Mood — кофейня bubble tea" />
+  <meta property="og:description" content="Свежие напитки, акции и бонусная программа. Настроение в каждом стаканчике!" />
+  <meta property="og:locale" content="ru_RU" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧋</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Unbounded:wght@600;800&display=swap" rel="stylesheet" />
+  <title>Bubble Tea Mood — кофейня bubble tea</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo">Bubble<span>Tea</span>Mood</a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Переключить меню" />
+      <label for="nav-toggle" class="nav-burger" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#menu">Меню</a></li>
+          <li><a href="#promo">Акции</a></li>
+          <li><a href="#loyalty">Бонусы</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <button type="button" class="cart-btn" aria-label="Корзина">
+        🧋
+        <span class="cart-btn__badge" id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Главный раздел -->
+    <section id="hero" class="hero">
+      <div class="container hero__inner">
+        <span class="hero__badge">Свежий bubble tea каждый день</span>
+        <h1 class="hero__title">Настроение в каждом <span class="accent">стаканчике</span></h1>
+        <p class="hero__subtitle">Ароматный чай, молоко и фруктовые топпинги. Взболтаем ваше настроение уже сегодня!</p>
+        <div class="hero__actions">
+          <a href="#menu" class="btn btn--primary">Смотреть меню</a>
+          <a href="#contacts" class="btn btn--ghost">Как нас найти</a>
+        </div>
+
+        <div class="bubble-cup" aria-hidden="true">
+          <div class="bubble-cup__straw"></div>
+          <div class="bubble-cup__lid"></div>
+          <div class="bubble-cup__body">
+            <div class="bubble-cup__tea"></div>
+            <div class="bubble-cup__pearls">
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__bubbles" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- О компании -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">О компании</span>
+          <h2 class="section-title">Наша история</h2>
+        </div>
+        <div class="about__grid">
+          <div class="about__text">
+            <p>Bubble Tea Mood начиналась с маленькой идеи: подарить городу место, где можно остановиться, выдохнуть и насладиться любимым напитком. Первую кофейню мы открыли в 2021 году с одним столом и огромным желанием делать вкусно.</p>
+            <p>Сегодня мы — команда бариста, которая выбирает только свежие ингредиенты: натуральный чай, сливки и сезонные фрукты. Каждый стакан мы готовим с любовью и капелькой хорошего настроения.</p>
+          </div>
+          <ul class="about__facts">
+            <li class="reveal"><strong><span data-count="5">0</span></strong><span>готовим bubble tea</span></li>
+            <li class="reveal"><strong><span data-count="20">0</span>+</strong><span>фирменных напитков</span></li>
+            <li class="reveal"><strong><span data-count="10000">0</span>+</strong><span>счастливых гостей</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Меню -->
+    <section id="menu" class="menu">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Меню</span>
+          <h2 class="section-title">Фирменные напитки</h2>
+        </div>
+        <div class="menu__filters" role="tablist" aria-label="Фильтр напитков">
+          <button type="button" class="menu__filter is-active" data-filter="all">Все</button>
+          <button type="button" class="menu__filter" data-filter="classic">Классика</button>
+          <button type="button" class="menu__filter" data-filter="matcha">Матча</button>
+          <button type="button" class="menu__filter" data-filter="berry">Ягоды</button>
+          <button type="button" class="menu__filter" data-filter="exotic">Экзотика</button>
+        </div>
+        <div class="menu__grid">
+          <article class="menu-card reveal" data-category="classic">
+            <div class="menu-card__image-container">
+              <img src="sourcecraft/classic.png" alt="Классический молочный" class="menu-card__img" width="120" height="120" loading="lazy" decoding="async" />
+            </div>
+            <h3>Классический молочный</h3>
+            <p>Чёрный чай, молоко и тапиока. Наш бестселлер!</p>
+            <span class="menu-card__price">299 ₽</span>
+            <div class="menu-card__actions">
+              <button type="button" class="btn btn--small btn--primary menu-card__add" data-name="Классический молочный" data-price="299">В корзину</button>
+              <button type="button" class="btn btn--small btn--ghost menu-card__more" data-name="Классический молочный" data-price="299" data-desc="Чёрный чай, молоко и тапиока. Наш бестселлер!" data-img=".sourcecraft/classic.png">Подробнее</button>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="matcha">
+            <div class="menu-card__image-container">
+              <img src="sourcecraft/matcha.png" alt="Матча латте" class="menu-card__img" width="120" height="120" loading="lazy" decoding="async" />
+            </div>
+            <h3>Матча латте</h3>
+            <p>Японская матча, молоко и лёгкая сладость.</p>
+            <span class="menu-card__price">349 ₽</span>
+            <div class="menu-card__actions">
+              <button type="button" class="btn btn--small btn--primary menu-card__add" data-name="Матча латте" data-price="349">В корзину</button>
+              <button type="button" class="btn btn--small btn--ghost menu-card__more" data-name="Матча латте" data-price="349" data-desc="Японская матча, молоко и лёгкая сладость." data-img=".sourcecraft/matcha.png">Подробнее</button>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="exotic">
+            <div class="menu-card__image-container">
+              <img src="sourcecraft/taro.png" alt="Таро слим" class="menu-card__img" width="120" height="120" loading="lazy" decoding="async" />
+            </div>
+            <h3>Таро слим</h3>
+            <p>Кремовый таро, молоко и нежный сиреневый цвет.</p>
+            <span class="menu-card__price">329 ₽</span>
+            <div class="menu-card__actions">
+              <button type="button" class="btn btn--small btn--primary menu-card__add" data-name="Таро слим" data-price="329">В корзину</button>
+              <button type="button" class="btn btn--small btn--ghost menu-card__more" data-name="Таро слим" data-price="329" data-desc="Кремовый таро, молоко и нежный сиреневый цвет." data-img=".sourcecraft/taro.png">Подробнее</button>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="berry">
+            <div class="menu-card__image-container">
+              <img src="sourcecraft/berry.png" alt="Ягодный микс" class="menu-card__img" width="120" height="120" loading="lazy" decoding="async" />
+            </div>
+            <h3>Ягодный микс</h3>
+            <p>Клубника и малина с зелёным чаем и льдом.</p>
+            <span class="menu-card__price">359 ₽</span>
+            <div class="menu-card__actions">
+              <button type="button" class="btn btn--small btn--primary menu-card__add" data-name="Ягодный микс" data-price="359">В корзину</button>
+              <button type="button" class="btn btn--small btn--ghost menu-card__more" data-name="Ягодный микс" data-price="359" data-desc="Клубника и малина с зелёным чаем и льдом." data-img=".sourcecraft/berry.png">Подробнее</button>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="exotic">
+            <div class="menu-card__image-container">
+              <img src="sourcecraft/thai.png" alt="Тайский чай" class="menu-card__img" width="120" height="120" loading="lazy" decoding="async" />
+            </div>
+            <h3>Тайский чай</h3>
+            <p>Пряный тайский чай с кокосовым молоком.</p>
+            <span class="menu-card__price">319 ₽</span>
+            <div class="menu-card__actions">
+              <button type="button" class="btn btn--small btn--primary menu-card__add" data-name="Тайский чай" data-price="319">В корзину</button>
+              <button type="button" class="btn btn--small btn--ghost menu-card__more" data-name="Тайский чай" data-price="319" data-desc="Пряный тайский чай с кокосовым молоком." data-img=".sourcecraft/thai.png">Подробнее</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Акции -->
+    <section id="promo" class="promo">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Акции</span>
+          <h2 class="section-title">Выгодные предложения</h2>
+        </div>
+        <div class="promo__grid">
+          <article class="promo-card promo-card--green reveal">
+            <span class="promo-card__label">Каждый день</span>
+            <h3>Счастливые часы</h3>
+            <p>Скидка 20% на все напитки с 12:00 до 15:00.</p>
+          </article>
+          <article class="promo-card promo-card--lilac reveal">
+            <span class="promo-card__label">По вторникам</span>
+            <h3>2 + 1 в подарок</h3>
+            <p>Купите два напитка — третий получите бесплатно.</p>
+          </article>
+          <article class="promo-card promo-card--beige reveal">
+            <span class="promo-card__label">Новым гостям</span>
+            <h3>−50% на первый заказ</h3>
+            <p>Промокод MOOD при первом заказе в кофейне.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Бонусная программа -->
+    <section id="loyalty" class="loyalty">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Бонусная программа</span>
+          <h2 class="section-title">Правила лояльности</h2>
+        </div>
+        <div class="loyalty__grid">
+          <div class="loyalty-card reveal">
+            <div class="loyalty-card__icon">💜</div>
+            <h3>Копите баллы</h3>
+            <p>1 балл за каждые 50 ₽ в чеке. Баллы зачисляются сразу после оплаты.</p>
+          </div>
+          <div class="loyalty-card reveal">
+            <div class="loyalty-card__icon">🎁</div>
+            <h3>Меняйте на напитки</h3>
+            <p>100 баллов = 200 ₽ скидки. Можно оплатить до 50% заказа.</p>
+          </div>
+          <div class="loyalty-card reveal">
+            <div class="loyalty-card__icon">🎂</div>
+            <h3>Бонус в день рождения</h3>
+            <p>В свой праздник получайте двойной кэшбек и бесплатный топпинг.</p>
+          </div>
+          <div class="loyalty-card reveal">
+            <div class="loyalty-card__icon">⭐</div>
+            <h3>Растите по уровням</h3>
+            <p>Гость → Постоянный гость → VIP. Чем выше уровень, тем больше привилегий.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" class="contacts">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Контакты</span>
+          <h2 class="section-title">Ждём вас в гости</h2>
+        </div>
+        <div class="contacts__grid">
+          <div class="contacts-card reveal">
+            <h3>📍 Местоположение</h3>
+            <p>г. Москва, ул. Чайная, 15<br />Бизнес-центр «Муд», 1 этаж</p>
+          </div>
+          <div class="contacts-card reveal">
+            <h3>🕒 Часы работы</h3>
+            <p>Пн–Пт: 9:00 – 21:00<br />Сб–Вс: 10:00 – 22:00</p>
+          </div>
+          <div class="contacts-card reveal">
+            <h3>📞 Связь с нами</h3>
+            <p>
+              <a href="tel:+79000000000">+7 (900) 000-00-00</a><br />
+              <a href="mailto:hello@bubbleteamood.ru">hello@bubbleteamood.ru</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2025 Bubble Tea Mood. Готовим с любовью и жемчужинами.</p>
+    </div>
+  </footer>
+
+  <button type="button" class="to-top" aria-label="Вернуться наверх">↑</button>
+
+  <dialog class="modal" id="drink-modal">
+    <div class="modal__content">
+      <button type="button" class="modal__close" aria-label="Закрыть окно">×</button>
+      <img src="" alt="" class="modal__img" id="modal-img" />
+      <h3 class="modal__title" id="modal-title"></h3>
+      <p class="modal__desc" id="modal-desc"></p>
+      <span class="menu-card__price" id="modal-price"></span>
+      <button type="button" class="btn btn--primary modal__add" id="modal-add">В корзину</button>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    // Плавное появление секций при прокрутке
+    const revealEls = document.querySelectorAll(".reveal");
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    revealEls.forEach((el) => revealObserver.observe(el));
+
+    // Кнопка «Наверх»
+    const toTopBtn = document.querySelector(".to-top");
+    window.addEventListener("scroll", () => {
+      toTopBtn.classList.toggle("is-visible", window.scrollY > 400);
+    });
+    toTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Анимированные счётчики фактов
+    const counters = document.querySelectorAll("[data-count]");
+    const counterObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          const target = Number(el.dataset.count);
+          const duration = 1200;
+          const start = performance.now();
+          const step = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.round(target * eased).toLocaleString("ru-RU");
+            if (progress < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+          counterObserver.unobserve(el);
+        });
+      },
+      { threshold: 0.6 }
+    );
+    counters.forEach((el) => counterObserver.observe(el));
+
+    // Фильтрация меню по категориям
+    const filters = document.querySelectorAll(".menu__filter");
+    const menuCards = document.querySelectorAll(".menu-card");
+    filters.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        filters.forEach((b) => b.classList.remove("is-active"));
+        btn.classList.add("is-active");
+        const filter = btn.dataset.filter;
+        menuCards.forEach((card) => {
+          const show = filter === "all" || card.dataset.category === filter;
+          card.classList.toggle("is-hidden", !show);
+        });
+      });
+    });
+
+    // Корзина и toast-уведомления
+    let cartCount = 0;
+    const cartBadge = document.getElementById("cart-count");
+    const toast = document.getElementById("toast");
+    let toastTimer;
+
+    function addToCart(name) {
+      cartCount += 1;
+      cartBadge.textContent = cartCount;
+      cartBadge.classList.add("is-bump");
+      setTimeout(() => cartBadge.classList.remove("is-bump"), 400);
+      showToast(`${name} добавлен в корзину 🧋`);
+    }
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add("is-visible");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove("is-visible"), 2600);
+    }
+
+    document.querySelectorAll(".menu-card__add").forEach((btn) => {
+      btn.addEventListener("click", () => addToCart(btn.dataset.name));
+    });
+
+    // Модальное окно с деталями напитка
+    const modal = document.getElementById("drink-modal");
+    const modalImg = document.getElementById("modal-img");
+    const modalTitle = document.getElementById("modal-title");
+    const modalDesc = document.getElementById("modal-desc");
+    const modalPrice = document.getElementById("modal-price");
+    const modalAdd = document.getElementById("modal-add");
+    let modalName = "";
+
+    document.querySelectorAll(".menu-card__more").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        modalName = btn.dataset.name;
+        modalImg.src = btn.dataset.img;
+        modalImg.alt = btn.dataset.name;
+        modalTitle.textContent = btn.dataset.name;
+        modalDesc.textContent = btn.dataset.desc;
+        modalPrice.textContent = `${btn.dataset.price} ₽`;
+        modal.showModal();
+      });
+    });
+
+    modalAdd.addEventListener("click", () => addToCart(modalName));
+    document.querySelector(".modal__close").addEventListener("click", () => modal.close());
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) modal.close();
+    });
+
+    // Scrollspy: подсветка активного пункта навигации
+    const sections = document.querySelectorAll("main section[id]");
+    const navLinks = document.querySelectorAll(".nav__list a");
+    const spyObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            navLinks.forEach((link) => {
+              link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`);
+            });
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px" }
+    );
+    sections.forEach((section) => spyObserver.observe(section));
+  </script>
+</body>
+</html>
